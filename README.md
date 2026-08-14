@@ -7,7 +7,6 @@
     <body>
         <div class="resstack">
             <h1>WEB DEVELOPMENT FULL <em>ROADMAP.</em> </h1>
-            <hr />
             <h2>The Resource Stack (and why each one earns its spot) </h2>
             <ul>
             <p>Stage                 | Resource |                              | Why this one specifically |</p>
