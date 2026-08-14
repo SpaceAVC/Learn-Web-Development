@@ -2,7 +2,6 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Web Development Mastery.</title>
         <link rel="stylesheet" href="./style.css" />
     </head>
     <body>
