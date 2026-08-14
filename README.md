@@ -9,7 +9,6 @@
             <h1>WEB DEVELOPMENT FULL <em>ROADMAP.</em> </h1>
             <h2>The Resource Stack (and why each one earns its spot) </h2>
             <ul>
-            <p>Stage                 | Resource |                              | Why this one specifically |</p>
             <li>HTML/CSS foundations:- freeCodeCamp - Responsive Web Design | Structured, project-certified, forces real building over passive watching. </li>
             <li>CSS intuition:- Kevin Powell (YouTube) | Best free teacher alive for *why* CSS behaves the way it does, not just syntax. </li>
             <li>JS foundations + dev environment habits:- The Odin Project — Foundations | Uses a real local editor, terminal, and Git from day one — no browser sandbox crutch. </li>
@@ -19,7 +18,7 @@
             <li>Backend foundations:- ScrIMba's free Learn Node.js + Learn Express.js | Fast, clean intro without wading through hours of setup friction. </li>
             <li>Backend project depth:- The Odin Project — NodeJS course | Real, spec-driven backend projects with minimal hand-holding — closest thing to actual work. </li>
             <li>SQL:- freeCodeCamp — Relational Database certification | Real PostgreSQL in a real terminal, not just theory. </li>
-            <li>React + production patterns:- Full Stack Open (University of Helsinki, free) | This is the single best free resource for going beyond tutorial-React into how React, Redux, Node, MongoDB,<br /> TypeScript, testing, and CI/CD fit together in a real app. Continuously updated, university-grade, industry-respected.</li>
+            <li>React + production patterns:- Full Stack Open (University of Helsinki, free) | This is the single best free resource for going beyond tutorial-React into how React, Redux, Node, MongoDB,<br /> TypeScript, testing, and CI/CD fit together in a real                 app. Continuously updated, university-grade, industry-respected.</li>
             <li>Reference docs (always open):- | MDN, react.dev, ExpreSSjs.com/en/guide | Primary sources beat secondhand explanations once you know the basics. </li>
             <li>Performance & accessibility:- web.dev (Google) | Teaches you to audit and fix real Lighthouse scores — a skill most courses skip entirely. </li>
             <li>Community / getting unstuck:-  The Odin Project Discord, freeCodeCamp forum, r/weBDev | For when you're stuck longer than 30-40 minutes — ask well-formed questions, don't just lurk. </li>
