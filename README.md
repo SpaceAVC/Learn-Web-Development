@@ -10,7 +10,7 @@
             <hr />
             <h2>The Resource Stack (and why each one earns its spot) </h2>
             <ul>
-            <p>Stage | Resource | Why this one specifically |</p>
+            <p>Stage                 | Resource |                              | Why this one specifically |</p>
             <li>HTML/CSS foundations:- freeCodeCamp - Responsive Web Design | Structured, project-certified, forces real building over passive watching. </li>
             <li>CSS intuition:- Kevin Powell (YouTube) | Best free teacher alive for *why* CSS behaves the way it does, not just syntax. </li>
             <li>JS foundations + dev environment habits:- The Odin Project — Foundations | Uses a real local editor, terminal, and Git from day one — no browser sandbox crutch. </li>
