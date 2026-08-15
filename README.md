@@ -34,7 +34,7 @@
             <li>Day 5: Responsive design, media queries, mobile-first approach — freeCodeCamp's Responsive Web Design module covers this directly (it's the same certification track you've been in all<br /> week), plus Kevin Powell's media queries video for the "why" behind mobile-first ordering.</li>
             <li>Day 6: Git properly — branches, meaningful commit messages, `.gitignore`, resolving a merge conflict on purpose (break one intentionally, then fix it). The Odin Project's Foundations<br /> course has a dedicated Git section that's exactly this. For hands-on branch/merge practice specifically, add **Learn Git Branching** (learngitbranching.js.org) — it's an interactive<br /> visual sandbox built for exactly this kind of drilling and it's free.</li>
             <li>Day 7: Rest.</li>
-            <h3>WEEK GOAL AND (SHIP THIS WEEK): 3 small responsive pages (a personal landing page, a pricing page clone from scratch, a restaurant menu page) — all pushed to GitHub, deployed to GitHub Pages.</h3>
+            <h3 color="green">WEEK GOAL AND (SHIP THIS WEEK): 3 small responsive pages (a personal landing page, a pricing page clone from scratch, a restaurant menu page) — all pushed to GitHub, deployed to GitHub Pages.</h3>
         </div>
     </body>
 </html>
