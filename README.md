@@ -6,6 +6,7 @@
             li {
                 color: blue;
             }
+        </style>
     </head>
     <body>
         <div class="resstack">
