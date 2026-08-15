@@ -24,7 +24,7 @@
             </ul>
         </div>
         <div class="Week1">
-            <h2>Week 1 — HTML, CSS & Real Developer Habits.</h2>
+            <h2><i>Week 1 — HTML, CSS & Real Developer Habits. </i></h2>
             <p>Goal:Write clean, semantic, responsive HTML/CSS by hand, and set up a real local dev environment (not a browser playground).</p>
             <ul>
             <li>Day 1: Local environment setup — VS Code, extensions, terminal basics, Git config. Then start freeCodeCamp's Responsive Web Design (HTML basics).</li>
