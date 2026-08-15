@@ -6,7 +6,7 @@
     <body>
         <div class="resstack">
             <h1>WEB DEVELOPMENT FULL <em>ROADMAP.</em> </h1>
-            <h2>The Resource Stack (and why each one earns its spot) </h2>
+            <h2><i>The Resource Stack (and why each one earns its spot) </i></h2>
             <ul>
             <li>HTML/CSS foundations:- freeCodeCamp - Responsive Web Design | Structured, project-certified, forces real building over passive watching. </li>
             <li>CSS intuition:- Kevin Powell (YouTube) | Best free teacher alive for *why* CSS behaves the way it does, not just syntax. </li>
@@ -24,7 +24,7 @@
             </ul>
         </div>
         <div class="Week1">
-            <h2><i>Week 1 — HTML, CSS & Real Developer Habits. </i></h2>
+            <h2><i>Week 1 — HTML, CSS & Real Developer Habits </i></h2>
             <p>Goal:Write clean, semantic, responsive HTML/CSS by hand, and set up a real local dev environment (not a browser playground).</p>
             <ul>
             <li>Day 1: Local environment setup — VS Code, extensions, terminal basics, Git config. Then start freeCodeCamp's Responsive Web Design (HTML basics).</li>
