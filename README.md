@@ -2,11 +2,6 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <style>
-            li {
-                color: blue;
-            }
-        </style>
     </head>
     <body>
         <div class="resstack">
