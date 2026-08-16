@@ -1,5 +1,5 @@
 <h1>WebDevelopment Developer Challenge Files </h1>
-<p>These are the challenge files for the YouTube course: <a href="https://www.youtube.com/watch?v=LzMnsfqjzkA">Become a Web Development Developer from Scratch – Full Beginner's Tutorial. </a>To get started, download or clone the entire repo and then navigate to the folder you need - the folders are structured just like the course. </p>
+<p>These are the challenge files for the Self-Taught course:</a>To get started, download or clone the entire repo and then navigate to the folder you need - the folders are structured just like the course. </p>
 <br />
 <p>For the full interactive learning experience, check out this <a href="https://www.freecodecamp.org/learn/responsive-web-design-v9/#lecture-understanding-html-attributes">Web Developer Path on freecodecamp. </p>
 <br />
