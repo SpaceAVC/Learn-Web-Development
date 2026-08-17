@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- 1. Tells the browser to read the page using UTF-8 characters, so special symbols show up correctly -->
+        <meta charset="UTF-8" />
+        <!-- 2. Controls how the page looks on mobile devices/screens -->
+        <meta 
+        name="viewpoint"
+        content="width=device-width initial-scale=1.0" />
+        <!-- 3. Text shown on the browser tab -->
+        <title>XYZ Bookstore Page</title>
+    </head>
+    <body>
+        <!-- 4. Main heading of the page, usually the biggest text -->
+        <h1>XYZ Bookstore</h1>
+        <!-- 5. A paragraph of normal text -->
+        <p>Browse our collections of amazing books!</p>
 
+        <!-- 6. A container div that groups all the book cards together -->
+        <div class="card-container">
+            <!-- 7. A single card for one book, using an id so it can be uniquely styled or targeted -->
+            <div id="sally-adventure-book" class="card">
+
+                <!-- 8. Sub-heading, smaller than h1, used for each book's title -->
+                <h2>Sally's Adventure Book</h2>
+                <!-- 9. Paragraph describing the book -->
+                <p>This is an epic story of Sally and her dog Rex as they navigate through other worlds.</p>
+                <!-- 10. Clickable button for buying the book -->
+                <button class="btn">Buy Now</button>
+
+            </div>
+            <!-- 11. Another card, same idea as above, for a different book -->
+            <div id="dave-cook-adventure" class="card">
+
+                <h2>Dave's Cook Adventure</h2>
+                <p>This is the story of Dave as he learns to cook everything from pancakes to pasta, one recipe at a time.</p>
+                <button class="btn">Buy Now</button>
+
+            </div>
+        </div>
+
+        <!-- 12. A short instruction telling the user to review their cart before checking out -->
+        <p>Review your selections and continue to checkout.</p>
+
+        <!-- 13. A container div that groups the cart and checkout buttons together -->
+        <div id="box-container" class="btn">
+        
+        <!-- 14. Button to view the shopping cart -->
+        <button id="view-cart-btn" class="btn">View Cart</button>
+        <!-- 15. Button to go to checkout -->
+        <button id="check-out-btn" class="btn">CheckOut </button>
+        
+        </div>
+    </body>
+</html>
