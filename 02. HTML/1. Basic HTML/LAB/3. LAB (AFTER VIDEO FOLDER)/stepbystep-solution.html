@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<!-- 1. This line tells the browser we are using HTML5 -->
+<html lang="en">
+    <head>
+        <!-- 2. <head> holds information ABOUT the page (not shown on screen) like title and meta tags -->
 
+        <!-- 3. Character encoding: UTF-8 supports almost every letter and symbol, so text never shows as broken characters -->
+        <meta charset="UTF-8" />
+
+        <!-- 4. Viewport meta tag: makes the page match the phone/tablet's real screen width and normal zoom level.
+             Fixed a small typo here: it was "initial-scale:1.0" (colon), but attribute values need "=" (equals sign)
+             between the setting name and its value, so it's now "initial-scale=1.0" -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- 5. <title> sets the text shown on the browser tab and in search engine results -->
+        <title>Audio and Video Player</title>
+    </head>
+    <body>
+        <!-- 6. <body> holds everything that actually shows up on the page for the visitor to see -->
+
+        <!-- 7. <h1> is the biggest, most important heading on the page. There should only be one <h1> per page -->
+        <h1>HTML Audio and Video Lab</h1>
+
+        <!-- 8. <section> groups related content together under one topic.
+             id="video-section" gives this exact section a unique name (useful for linking or styling just this one).
+             class="player" is a label that can be shared by multiple elements (both sections use it here) -->
+        <section id="video-section" class="player">
+
+            <!-- 9. <h2> is a sub-heading, one level smaller than <h1>, used to title this section's content -->
+            <h2>What is the map method and how does it work?</h2>
+
+            <!-- 10. <video> embeds a video player.
+                 width="640" sets the player's width in pixels.
+                 controls shows the play/pause button, volume slider, and progress bar (a "boolean" attribute:
+                 just writing its name turns it on, no value needed) -->
+            <video width="640" controls>
+
+            <!-- 11. <source> tells the browser where to find the actual video file.
+                 It's self-closing (no closing tag needed) since it has nothing inside it.
+                 src is the file's web address. type tells the browser what kind of file it is (its "MIME type"),
+                 so the browser knows how to handle it before downloading the whole thing -->
+            <source src="https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.mp4"
+            type="video/mp4" />
+
+            <!-- 12. Closing tag for <video>. Needed because <video> can contain other elements
+                 (like the <source> tag above) -->
+            </video>
+        <!-- 13. Closing tag for the video <section> -->
+        </section>
+
+        <!-- 14. Second <section>: same idea as before, grouping the audio content together.
+             id="audio-section" gives this section its own unique name, while class="player"
+             is still shared with the video section above -->
+        <section id="audio-section" class="player">
+
+            <!-- 15. Sub-heading for this section, naming the song -->
+            <h2>Sailing Away</h2>
+
+            <!-- 16. <audio> embeds a sound player, similar to <video> but for audio-only files.
+                 src is the direct link to the audio file.
+                 controls shows play/pause and volume buttons.
+                 loop makes the song automatically restart when it ends.
+                 Fixed a missing closing tag here: the original was missing "</audio>", which can make
+                 browsers guess where the element ends and sometimes swallow the content after it -->
+            <audio src="https://cdn.freecodecamp.org/curriculum/js-music-player/sailing-away.mp3" controls loop></audio>
+
+        <!-- 17. Closing tag for the audio <section> -->
+        </section>
+    </body>
+</html>
