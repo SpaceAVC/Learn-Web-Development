@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<!-- 1. This line tells the browser we are using HTML5. Without it, older/quirky rendering rules might kick in -->
+<html lang="en">
+<head>
+    <!-- 2. <head> holds information ABOUT the page (not shown on screen) like title, meta tags, links to styles/scripts -->
 
+    <!-- 3. Character encoding: UTF-8 supports almost every letter, symbol, and emoji from every language, so text never shows as broken symbols -->
+    <meta charset="UTF-8">
+
+    <!-- 4. Viewport meta tag: without this, phones would shrink the whole page to fit a "desktop-sized" view.
+        "width=device-width" makes the page match the phone's actual screen width,
+        "initial-scale=1.0" sets the starting zoom level to normal (not zoomed in/out) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 5. <title> sets the text shown on the browser tab and in search engine results -->
+    <title>Working with the HTML Video Element</title>
+</head>
+<body>
+    <!-- 6. <body> holds everything that actually shows up on the page for the visitor to see -->
+
+    <!-- 7. <h1> is the biggest, most important heading on the page. There should only be one <h1> per page -->
+    <h1>Working with the HTML Video Element</h1>
+
+    <!-- 8. <video> is the element that embeds a video player on the page.
+        It needs a closing tag </video> because things can go INSIDE it (like the <source> tags below).
+        Note: HTML comments can't sit INSIDE a tag's attribute list, so here's what each attribute below does:
+        - width="640"  → sets how wide the video player is on screen, measured in pixels
+        - loop         → boolean attribute (just its name, no value needed) that makes the video
+                            automatically restart from the beginning every time it finishes
+        - controls     → boolean attribute that shows the play/pause button, volume slider,
+                            progress bar, and fullscreen button. Without it, visitors couldn't control playback
+        - muted        → boolean attribute that starts the video with the sound off.
+                            Browsers usually block videos from auto-playing WITH sound, so muted often pairs with autoplay
+        - poster       → the image shown BEFORE the video starts playing (like a thumbnail/cover image),
+                            instead of a blank black box -->
+    <video
+        width="640"
+        loop
+        controls
+        muted
+        poster="https://cdn.freecodecamp.org/curriculum/labs/past-event2.jpg"
+    >
+    <!-- 9. <source> tells the browser where to find one version of the video file.
+        It's a self-closing tag (no closing </source> needed) because it has no content inside it.
+        - src  → the file path/URL to the actual video file for this source
+        - type → tells the browser what KIND of file this is (its "MIME type"),
+        so it can decide if it's able to play this format without downloading it first -->
+    <source
+        src="https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.mp4"
+        type="video/mp4"
+    >
+    <!-- 10. Second <source>: an alternative copy of the SAME video, but in .webm format.
+        Not every browser supports every video format, so providing several formats increases the chance
+        that at least one of them will work for the visitor -->
+    <source
+        src="https://cdn.freecodecamp.org/curriculum/labs/mapmethod.webm"
+        type="video/webm"
+    >
+    <!-- 11. Third <source>: same video again, in .ogg format, for even wider browser support -->
+    <source
+        src="https://cdn.freecodecamp.org/curriculum/labs/mapmethod.ogg"
+        type="video/ogg"
+    >
+    <!-- 12. Fourth <source>: same video again, in .mov format (common on Apple devices) -->
+    <source
+    src="https://cdn.freecodecamp.org/curriculum/labs/mapmethod.mov"
+    type="video/quicktime">
+    <!-- 13. How the browser picks a source: it reads the <source> tags top to bottom and uses
+        the FIRST format it knows how to play, ignoring the rest. That's why the .mp4 (most widely supported) is listed first -->
+
+    <!-- 14. Closing tag for <video>. Everything between the opening <video ...> tag and here
+        was the list of possible video files to choose from -->
+    </video>
+</body>
+</html>
