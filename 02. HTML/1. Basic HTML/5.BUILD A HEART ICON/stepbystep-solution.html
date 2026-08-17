@@ -1,1 +1,51 @@
+<!doctype html>
+<!-- 1. This line tells the browser we are using HTML5 -->
+<html lang="en">
+    <head>
+        <!-- 2. Character encoding: makes sure text and symbols show correctly -->
+        <meta charset="UTF-8" />
 
+        <!-- 3. The title that shows on the browser tab -->
+        <title>Heart Icon</title>
+    </head>
+    <body>
+
+        <!-- 4. <svg> = "Scalable Vector Graphics". It's a container for drawing shapes with
+             code (lines, curves, circles) instead of using a photo file like .jpg or .png.
+             Icons are often built this way because they stay sharp at any size. -->
+
+        <!-- 5. width and height: how big the icon shows up on the page, in pixels.
+             Icons are usually kept small, so both are set to 24 -->
+
+        <!-- 6. fill: the color used to fill in the shape once it's drawn. Set to "red"
+             so the heart shows up in red -->
+
+        <!-- 7. viewBox: controls what part of the drawing is visible, using 4 numbers
+             separated by spaces: "min-x min-y width height"
+                - min-x and min-y (0 0) = the top-left starting point of the visible area
+                - width and height (24 24) = how much of the drawing area is shown, matching
+                  the icon's actual width and height so nothing gets cut off or stretched -->
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="red">
+
+            <!-- 8. <path> is the element that actually draws the shape inside the <svg>.
+                 On its own, <svg> is just an empty box — <path> is what puts a picture in it -->
+
+            <!-- 9. d = "data". This attribute holds the drawing instructions: a string of
+                 letters and numbers that tell the browser where to move the pen and what to draw.
+                    - Letters are commands, for example:
+                        M = "Move to" a starting point (like lifting the pen down at a spot)
+                        C = "Curve" — draws a curved line to a point
+                        z = "Close path" — draws a straight line back to the start and finishes
+                    - Numbers after each letter are coordinates (x and y positions) the pen moves to
+                 Together, these commands draw the two rounded bumps and pointed bottom of a heart -->
+            <path
+                d="M12 21s-6-4.35-9.33-8.22C-.5 7.39 3.24 1 8.4 4.28 10.08 5.32 12 7.5 12 7.5s1.92-2.18 3.6-3.22C20.76 1 24.5 7.39 21.33 12.78 18 16.65 12 21 12 21z"
+            ></path>
+
+        <!-- 10. Closing tag for <svg>. This was missing in the original code — without it,
+             the browser doesn't know where the drawing "ends", which can cause the rest of the
+             page to behave unpredictably -->
+        </svg>
+
+    </body>
+</html>
