@@ -1,0 +1,104 @@
+<!-- Step 1: Tell the browser this is an HTML5 document -->
+<!DOCTYPE html>
+
+<!-- Step 2: Root element that wraps the whole page -->
+<!-- lang="en" = tells browser the page language is English (helps screen readers/search engines) -->
+<html lang="en">
+
+<!-- Step 3: Head section - holds info ABOUT the page, not shown on screen -->
+<head>
+    <!-- meta charset = sets text encoding so special characters/symbols show correctly -->
+    <meta charset="UTF-8"/>
+    <!-- title = text shown on the browser tab -->
+    <title>CatPhotoApp</title>
+</head>
+
+<!-- Step 4: Body - everything visible on the webpage goes here -->
+<body>
+
+    <!-- Step 5: main = wraps the primary/central content of the page -->
+    <main>
+
+    <!-- h1 = biggest heading, used once per page for the main title -->
+    <h1>CatPhotoApp</h1>
+
+    <!-- Step 6: First section - groups related content together (Cat Photos part) -->
+    <section>
+        <!-- h2 = section heading, smaller than h1 -->
+        <h2>Cat Photos</h2>
+
+        <!-- p = paragraph text -->
+        <p>Everyone loves 
+            <!-- a = anchor/link element, takes you to another page -->
+            <!-- href = attribute that holds the destination URL -->
+            <a href="https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg">cute cats</a> 
+        online!</p>
+
+        <p>See more 
+            <!-- target="_blank" = attribute that opens the link in a NEW browser tab -->
+            <a target="_blank" href="https://freecatphotoapp.com">cat photos</a> 
+        in our gallery.</p>
+
+        <!-- a wrapping an img = makes the whole image clickable like a link -->
+        <a href="https://freecatphotoapp.com">
+            <!-- img = shows an image -->
+            <!-- src = attribute with the image file's URL -->
+            <!-- alt = backup text description, shown if image fails to load / read by screen readers -->
+            <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back.">
+        </a>
+    </section>
+
+    <!-- Step 7: Second section - groups the Cat Lists content -->
+    <section>
+        <h2>Cat Lists</h2>
+
+        <!-- h3 = smaller sub-heading, used under h2 -->
+        <h3>Things cats love:</h3>
+
+        <!-- ul = unordered list, shows items with bullet points -->
+        <ul>
+        <!-- li = single list item -->
+        <li>catnip</li>
+        <li>laser pointers</li>
+        <li>lasagna</li>
+        </ul>
+
+        <!-- figure = groups an image with its caption together -->
+        <figure>
+        <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
+        <!-- figcaption = caption/description text for the figure's image -->
+        <figcaption>Cats 
+            <!-- em = emphasized text, usually shows as italic -->
+            <em>love</em> lasagna.
+        </figcaption>  
+        </figure>
+
+        <h3>Top 3 things cats hate:</h3>
+
+        <!-- ol = ordered list, shows items with numbers (1,2,3) -->
+        <ol>
+        <li>flea treatment</li>
+        <li>thunder</li>
+        <li>other cats</li>
+        </ol>
+
+        <figure>
+        <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Two tabby kittens sleeping together on a couch.">
+        <figcaption>Cats 
+            <!-- strong = important text, usually shows as bold -->
+            <strong>hate</strong> other cats.
+        </figcaption>  
+        </figure>
+    </section>
+
+    </main>
+
+    <!-- Step 8: footer = bottom section of page, usually holds copyright/credit info -->
+    <footer>
+    <p>
+        No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a>
+    </p>
+    </footer>
+
+</body>
+</html>
