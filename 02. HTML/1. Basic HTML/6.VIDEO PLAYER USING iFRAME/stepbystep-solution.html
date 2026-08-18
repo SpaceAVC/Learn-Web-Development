@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<!-- Step 1: Document type declaration - tells the browser to render this using modern HTML5 rules.
+     Must always be the very first line, or the browser may fall into "quirks mode" and render things inconsistently -->
 
+<html lang="en">
+<!-- Step 2: Root element wrapping the entire page.
+     lang="en" tells browsers, screen readers, and search engines the page's language is English,
+     which helps accessibility tools pronounce content correctly and helps SEO -->
+
+  <head>
+    <!-- Step 3: Head section - holds metadata (info ABOUT the page, not content shown to the user) -->
+
+    <meta charset="UTF-8" />
+    <!-- Sets character encoding to UTF-8, the universal standard supporting nearly every language/symbol.
+         Prevents special characters from displaying as garbled text -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Controls how the page scales on mobile devices.
+         width=device-width: makes the page width match the device's screen width instead of a fixed desktop width
+         initial-scale=1.0: sets the initial zoom level to 100% when the page loads
+         Without this, mobile browsers may render the page zoomed out and tiny, requiring users to pinch-zoom -->
+
+    <title>Display Videos in an iframe</title>
+    <!-- Step 4: Text shown in the browser tab and used as the default bookmark name -->
+  </head>
+
+  <body>
+    <!-- Step 5: Body contains everything visible on the page -->
+
+    <h1>iframe Video Display</h1>
+    <!-- Step 6: Top-level heading describing the page's topic. Only one <h1> should exist per page,
+         both for accessibility (screen reader navigation) and SEO structure -->
+
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/I0_951_MPE0"
+      allow="accelerometer autoplay clipboard-write encrypted-media gyroscope web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    >
+    </iframe>
+    <!-- Step 7: Embeds an external YouTube video player inside the page using an inline frame.
+
+         width="560" height="315"  -> Sets the pixel dimensions of the embedded box.
+                                       560x315 is a 16:9 ratio, matching standard widescreen video proportions
+                                       so the video isn't stretched or squished.
+
+         src                        -> The URL of the content being embedded. This is YouTube's official
+                                       "embed" URL format (youtube.com/embed/VIDEO_ID), which is built
+                                       specifically to be placed inside iframes.
+
+         allow="..."                -> A permissions policy string that grants the embedded YouTube player
+                                       access to specific browser features it needs to function properly:
+                                         - accelerometer: lets video respond to device tilt/motion (e.g. VR-style content)
+                                         - autoplay: allows the video to autoplay if triggered
+                                         - clipboard-write: allows YouTube's UI to let users copy links/timestamps
+                                         - encrypted-media: allows playback of DRM-protected video content
+                                         - gyroscope: works with accelerometer for orientation-based features
+                                         - web-share: allows using the device's native "share" feature from within the player
+                                       Without this attribute, some YouTube player features may silently fail.
+
+         referrerpolicy="strict-origin-when-cross-origin"
+                                    -> Controls how much referrer information (your page's URL) is sent to
+                                       YouTube when the iframe loads. "strict-origin-when-cross-origin" sends
+                                       only the origin (not the full URL) when going to a different site, which
+                                       is a privacy-conscious default recommended by YouTube's own embed code.
+
+         allowfullscreen            -> A boolean attribute (no value needed) that allows the user to expand
+                                       the video to full-screen mode using the player's fullscreen button.
+                                       Without it, the fullscreen button may not work.
+
+         Note: <iframe> is NOT self-closing like <meta> or <br />. It requires an explicit closing tag
+         </iframe>, even when there's no content between the opening and closing tags, as shown here. -->
+
+  </body>
+  <!-- Step 8: Closes the body element -->
+
+</html>
+<!-- Step 9: Closes the html element. Closing tags occur in reverse order of opening: head/body content -> body -> html -->
