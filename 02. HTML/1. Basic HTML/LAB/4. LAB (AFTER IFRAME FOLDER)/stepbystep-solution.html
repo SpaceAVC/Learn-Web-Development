@@ -1,1 +1,92 @@
+<!DOCTYPE html>
+<!-- Step 1: Tells the browser to use modern HTML5 rendering rules -->
+<html lang="en">
+<!-- Step 2: Root element of the page. lang="en" tells browsers/screen readers/search engines the page is in English -->
 
+    <head>
+        <!-- Step 3: Head section holds metadata (info ABOUT the page, not visible content) -->
+
+        <meta charset="utf-8">
+        <!-- Sets character encoding to UTF-8 so special characters display correctly -->
+
+        <title>Video Compilation Page</title>
+        <!-- Text shown in the browser tab and used as the default bookmark name -->
+    </head>
+
+    <body>
+        <!-- Step 4: Body contains everything visible on the page -->
+
+        <main>
+            <!-- Semantic element marking the primary content of the page. Only one <main> per page -->
+
+            <h1>Movie Choices To Watch</h1>
+            <!-- Step 5: Top-level heading, describes the page's overall topic. Only one <h1> per page -->
+
+            <p>Here are some movies that I want to watch recent times! </p>
+            <!-- Paragraph element for the intro sentence -->
+
+            <!-- Step 6: Each movie gets its own <section> - a self-contained chunk of content -->
+            <section id="Spiderman" class="vid-comp">
+                <!-- id="Spiderman" = unique identifier for THIS element only (used for links, JS, single-element CSS) -->
+                <!-- class="vid-comp" = reusable label shared across all movie sections (used for shared CSS styling) -->
+
+                <h2>Spider-Man: Brand New Day</h2>
+                <!-- Sub-heading, one level below h1, creates proper heading hierarchy for accessibility/SEO -->
+
+                <p>Spider-Man: Brand New Day is a 2026 American superhero film based on the Marvel Comics character Spider-Man.<br /> 
+                Produced by Columbia Pictures, Marvel Studios, and Pascal Pictures, and distributed by Sony Pictures Releasing,<br />
+                </p>
+                <!-- <br /> forces a line break inside the same paragraph without starting a new <p> -->
+
+                <iframe
+                
+                src="https://vidlink.pro/movie/969681"
+                title="Spider-Man: Brand New Day"
+                width="560"
+                height="315"
+
+                >
+                </iframe>
+                <!-- Step 8: Embeds external content.
+                     src = URL of the content being loaded
+                     title = REQUIRED for accessibility, screen readers announce this
+                     width/height = 560x315 keeps the classic 16:9 video ratio
+                     Note: iframe must have a closing tag, it is not self-closing -->
+            </section>
+
+            <section id="Minions" class="vid-comp">
+                <h2>Minions and Monster</h2>
+                <p>Minions & Monsters is a 2026 American animated period comedy film directed by Pierre Coffin,<br />
+                who co-wrote the screenplay with Brian Lynch.</p>
+                <iframe
+                src="https://vidlink.pro/movie/1315772"
+                title="Minions and Monster"
+                width="560"
+                height="315"
+
+                >
+                </iframe>
+                <!-- Step 9: Same structure repeated - unique id, shared class, h2 title, p description, iframe video -->
+            </section>
+
+            <section id="Obsession" class="vid-comp">
+                <h2>Obsession</h2>
+                <p>A YouTube sketch comedian, Barker uploaded his short horror film The Chair to his channel in 2023.<br />
+                When producer James Harris approached him to adapt it into a feature film, Barker took the opportunity to pitch <br /> 
+                ,Obsession a different film idea of his partly inspired by The Simpsons episode "Treehouse of Horror II".</p>
+                <iframe
+                
+                src="https://vidlink.pro/movie/1339713"
+                title="Obsession"
+                width="560"
+                height="315"
+                
+                >
+                </iframe>
+            </section>
+
+        </main>
+        <!-- Step 10: Closing tags happen in reverse order of opening: main -> body -> html -->
+    </body>
+
+</html>
