@@ -1,1 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <!-- Tells the browser the character encoding (handles special
+         characters, emoji, accented letters, etc. correctly). -->
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Makes the page render at the device's actual width instead of
+         a zoomed-out "desktop" view on mobile. Without this, phones
+         would show a tiny, zoomed-out version of the whole page. -->
+
+    <title>Business card</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <!-- ===== THE CARD CONTAINER =====
+         Everything visually belonging to the card lives inside this
+         one div. This is why .business-card can have a width, border,
+         and centered margins in the CSS — it's a single box we can
+         size and position as one unit. -->
+    <div class="business-card">
+
+      <!-- Profile photo. alt text describes the image for screen
+           readers and shows as fallback text if the image fails
+           to load — always include real alt text, not decorative. -->
+      <img class="profile-image" src="1.png" alt="A beautiful flower.">
+      <!-- NOTE: alt text says "flower" but this is a profile photo —
+           worth updating to describe the actual person/image. -->
+
+      <!-- Name, title, and company use <p> tags (not <h1>/<h2>) even
+           though the name is the biggest text on the card. That's a
+           deliberate-looking choice here: font-size in CSS controls
+           the VISUAL size, while the HTML tag should reflect the
+           semantic MEANING. A business card's name isn't really a
+           page heading, so <p> + font-size is defensible — though
+           some devs would still reach for <h1> for the name since
+           it's the single most important piece of text on the page.
+           Both are valid; the choice is more about your DOCUMENT
+           OUTLINE (is a card "a page" or "a piece of content"?)
+           than about strict right/wrong. -->
+      <p class="full-name">Basketronics</p>
+      <p class="designation">Software Developer</p>
+      <p class="company">@basket</p>
+
+      <hr />
+      <!-- Divides "identity" info (name/title/company) from
+           "contact" info (email/phone/portfolio) below it. -->
+
+      <p class="mail">mail-me@example.com</p>
+      <p class="phone-no">(91) 2349234234</p>
+      <a class="portfolio-link" href="https://github.com/spaceavc/portfolio">Portfolio</a>
+
+      <hr />
+      <!-- Second divider: separates contact info from the
+           social media links section below. -->
+
+      <!-- ===== SOCIAL MEDIA SECTION =====
+           This is its own div (not just more <p> tags) because it
+           groups a HEADING + a paragraph of links together as one
+           logical unit — useful if you ever want to style or move
+           this whole block separately from the rest of the card. -->
+      <div class="social-media">
+        <h2>Connect with me</h2>
+        <!-- Using <h2> here (not <p>) is correct semantically — it's
+             a genuine sub-heading introducing the section below it,
+             unlike the name/title/company which are closer to
+             plain labeled text. -->
+
+        <p class="social-media-links">
+          <a href="https://x.com/SpaceAvc">Twitter</a>
+          <a href="https://www.linkedIn.com/">LinkedIn</a>
+          <a href="https://github.com/SpaceAVC/Learn-Web-Development">GitHub</a>
+        </p>
+        <!-- FIXED: original code was missing the closing </p> tag here.
+             Also fixed: the three <a> links were previously outside/
+             overlapping the .social-media div's closing tag —
+             indentation now matches actual nesting. -->
+
+      </div>
+      <!-- FIXED: original HTML never closed this div at all.
+           An unclosed div can cause everything AFTER it (or nothing,
+           depending on the browser) to be visually swallowed inside
+           .social-media's styling, which is a sneaky bug to spot. -->
+
+    </div>
+    <!-- Closes .business-card -->
+
+  </body>
+</html>
+<!-- FIXED: original file was missing this final closing </html> tag. -->
