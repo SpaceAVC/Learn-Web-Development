@@ -1,1 +1,191 @@
+/* =========================================
+   GLOBAL / BASE STYLES
+   Sets the tone for the whole page before
+   anything more specific overrides it.
+   ========================================= */
+body {
+  background-color: rosybrown;
+  font-family: Arial, sans-serif;
+}
 
+/* =========================================
+   THE CARD ITSELF
+   ========================================= */
+.business-card {
+  font-size: 16px;
+  /* 16px is the browser DEFAULT font-size anyway.
+     Setting it explicitly here isn't strictly needed,
+     but it's a good habit — it becomes the "1em" baseline
+     that everything inside this card is measured against. */
+
+  background-color: lavenderblush;
+  text-align: center;
+
+  width: 300px;
+  /* Fixed width chosen because a business card has a fixed
+     real-world shape (roughly a small rectangle). We're not
+     trying to make it stretch and reflow like an article. */
+
+  max-width: 400px;
+  /* This looks redundant next to width: 300px, and mostly is here —
+     width already locks it at 300px. max-width only kicks in if
+     something removes/overrides the fixed width (e.g. you later
+     switch width to a %). Keeping it is harmless insurance,
+     but not doing any real work in the current setup. */
+
+  margin-top: 100px;
+  /* Pure visual choice — pushes the card down from the top of
+     the page so it isn't jammed against the browser edge.
+     No formula here, just "eyeballed until it looked centered
+     vertically-ish on a typical screen." */
+
+  margin-left: auto;
+  margin-right: auto;
+  /* THE key trick for horizontal centering: when an element has
+     a fixed width and both left/right margins set to auto, the
+     browser splits the remaining space evenly on both sides. */
+
+  border: 3px solid darkslategray;
+  padding: 20px;
+  /* padding pushes content away from the border on the INSIDE.
+     20px is roughly "a comfortable thumb's-width" of breathing
+     room — small enough not to waste space in a 300px box,
+     big enough that text doesn't touch the border. */
+}
+
+/* =========================================
+   PROFILE IMAGE
+   ========================================= */
+.profile-image {
+  max-width: 100%;
+  /* "Never exceed the width of whatever container I'm inside."
+     Since .business-card is 300px wide (minus padding), this
+     image can never overflow the card, no matter how large
+     the original file is. This is the single most important
+     rule for making images behave inside any container. */
+
+  max-height: 150px;
+  /* Caps how TALL the image can get, independent of width.
+     Without this, a tall/portrait photo could make the card
+     awkwardly long. 150px ≈ half the card's width, which
+     keeps the photo looking like a portrait thumbnail rather
+     than a full poster. */
+
+  border: 2px solid black;
+}
+
+/* =========================================
+   TEXT BLOCKS: name / job title / company
+   Grouped in the comments because they follow the same
+   size-hierarchy logic: name > title > company.
+   ========================================= */
+.full-name {
+  color: rgb(47, 79, 79);
+  /* Same color as darkslategray, just written in rgb() instead
+     of a keyword — functionally identical. */
+
+  font-size: 24px;
+  /* The LARGEST text on the card. Names should visually "win"
+     first — it's the main thing you want a reader's eye to
+     land on. 24px is 1.5x the base 16px, a common, easy-to-read
+     scaling ratio. */
+
+  margin-top: 5px;
+  margin-bottom: 5px;
+  /* Small margins (5px) keep these stacked text lines close
+     together, like a real business card's tight text block,
+     rather than spread out like separate paragraphs. */
+
+  display: block;
+  /* <p> is already block-level by default, so this line isn't
+     doing anything extra here — safe to remove, but harmless
+     to leave as an explicit reminder. */
+}
+
+.designation {
+  color: grey;
+  font-size: 18px;
+  /* Smaller than the name (24px) but bigger than the company
+     (16px) — this creates a visual hierarchy:
+     name (most important) > job title > company (least important).
+     There's no strict rule for the exact numbers — what matters
+     is that each step is CLEARLY different, not just 1-2px off. */
+
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.company {
+  color: rgb(169, 169, 169);
+  /* A lighter grey than .designation's "grey" keyword —
+     pushes it further into the background visually, reinforcing
+     that it's the least important line of the three. */
+
+  font-size: 16px;
+  /* Matches the base font-size — no extra emphasis needed here. */
+
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* =========================================
+   DIVIDER LINES
+   ========================================= */
+hr {
+  color: grey;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* Bigger gap (20px) than the 5px used between name/title/company —
+     this is intentional: it visually SEPARATES sections of the card
+     (contact info vs. social links) instead of just spacing out
+     lines within the same group. */
+
+  width: 300px;
+  /* Matches .business-card's width exactly so the line spans the
+     full card edge-to-edge. NOTE: since .business-card has 20px
+     padding on each side, an hr set to 300px will actually be
+     WIDER than the space available and slightly overflow/get
+     constrained by the container — worth testing in DevTools.
+     A safer alternative is width: 100% so it always matches
+     whatever room is actually left after padding. */
+}
+
+/* =========================================
+   SOCIAL MEDIA SECTION
+   ========================================= */
+.social-media {
+  margin-top: 10px;
+
+  size: 14px;
+  /* NOTE: "size" is not a real CSS property for text —
+     this line does nothing. You likely meant font-size: 14px.
+     CSS won't throw an error for unknown properties; it just
+     silently ignores them, which is a common silent bug. */
+}
+
+.social-media a {
+  color: darkred;
+  margin: 0px 10px;
+  /* Shorthand: 0px top/bottom, 10px left/right.
+     This is what creates horizontal spacing BETWEEN the
+     Twitter / LinkedIn / GitHub links sitting side by side. */
+}
+
+/* =========================================
+   GENERAL TAG DEFAULTS
+   Placed last since these are broad fallback rules —
+   anything more specific above already overrides these.
+   ========================================= */
+p {
+  margin: 5px;
+  /* Shorthand for margin: 5px on all four sides.
+     This is actually OVERRIDDEN for .full-name, .designation,
+     and .company since they set their own top/bottom margins —
+     but .mail and .phone-no (plain <p> tags with no class)
+     rely on this default. */
+}
+
+a {
+  text-decoration: none;
+  /* Removes the default underline from all links. */
+}
