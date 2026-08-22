@@ -1,1 +1,105 @@
+/* 1. This rule styles the <body> tag - it affects the WHOLE page background/base look. */
+body {
+    font-family: Arial, sans-serif;
+    /* 2. Sets the font used for all text (Arial, or a generic sans-serif font as backup). */
+    background-color: #f0f0f0;
+    /* 3. Light gray background color for the entire page. */
+    margin: 0;
+    /* 4. Removes the default white space browsers add around the page edges. */
+    padding: 20px;
+    /* 5. Adds 20px of space INSIDE the body, so content doesn't touch the browser edges. */
+}
 
+/* 6. This rule styles the .container class - the white "card" box holding everything. */
+.container {
+    max-width: 400px;
+    /* 7. The box will never get wider than 400px, even on big screens. */
+    margin: 0 auto;
+    /* 8. "0" = no top/bottom margin. "auto" = center the box horizontally. */
+    background-color: #fff;
+    /* 9. White background for the card. */
+    padding: 20px;
+    /* 10. Space inside the card, between its border and its content. */
+    border-radius: 10px;
+    /* 11. Rounds the corners of the card. */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* 12. Adds a soft shadow around the card so it looks lifted off the page. */
+}
+
+/* 13. This rule styles the <h1> title tag. */
+h1 {
+    text-align: center;
+    /* 14. Centers the heading text horizontally. */
+    color: #333;
+    /* 15. Dark gray text color (softer than pure black). */
+}
+
+/* 16. This rule styles the .todo-list class - the main <ul> list. */
+.todo-list {
+    list-style-type: none;
+    /* 17. Removes the default bullet points from the list. */
+    padding: 0;
+    /* 18. Removes default left-side indentation/spacing on the list. */
+}
+
+/* 19. This rule styles every <li> INSIDE an element with class .todo-list (each task row). */
+.todo-list li {
+    margin-bottom: 15px;
+    /* 20. Adds space below each task so they don't touch each other. */
+    line-height: 1.50;
+    /* 21. Increases the space between lines of text for readability. */
+    padding: 10px;
+    /* 22. Space inside each task box, between its border and its content. */
+    background-color: #e5f1e5;
+    /* 23. Light green background for each task card. */
+    border-radius: 10px;
+    /* 24. Rounds the corners of each task card. */
+    position: relative;
+    /* 25. Lets you position child elements (if needed) relative to this box. */
+}
+
+/* 26. This rule targets <a> tags that ALSO have class="sub-item-link" (the note/resource links). */
+a.sub-item-link {
+    margin-left: 10px;
+    /* 27. Pushes the link slightly to the right, away from the checkbox text above it. */
+    text-decoration: none;
+    /* 28. Removes the default underline from the link. */
+}
+
+/* 29. ":link" = a PSEUDO-CLASS. It styles a link the user has NOT visited yet. */
+.sub-item-link:link {
+    color: blue;
+    /* 30. Unvisited links appear blue. */
+}
+
+/* 31. ":visited" = styles a link the user HAS already clicked before. */
+.sub-item-link:visited {
+    color: purple;
+    /* 32. Visited links turn purple, so users can tell what they already opened. */
+}
+
+/* 33. ":hover" = styles the link only while the mouse is over it. */
+.sub-item-link:hover {
+    color: red;
+    /* 34. Turns red on mouse-over for visual feedback. */
+}
+
+/* 35. ":focus" = styles the link when it's selected using keyboard (Tab key) - important for accessibility. */
+.sub-item-link:focus {
+    outline: 2px solid blue;
+    /* 36. Adds a visible blue outline so keyboard users can see what's selected. */
+    outline-offset: 1px;
+    /* 37. Adds 1px of space between the link and its outline, so it doesn't touch the text. */
+}
+
+/* 38. ":active" = styles the link at the exact moment it's being clicked (mouse button down). */
+.sub-item-link:active {
+    color: green;
+    /* 39. Turns green during the click, giving instant feedback that it registered. */
+}
+
+/* 40. This rule styles the nested .sub-item list (the mini list holding each link). */
+.sub-item {
+    list-style-type: square;
+    /* 41. Gives this inner list square-shaped bullet points, different from the outer list (which has none). */
+}
