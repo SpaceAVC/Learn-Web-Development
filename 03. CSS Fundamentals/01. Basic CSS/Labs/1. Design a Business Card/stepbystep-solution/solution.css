@@ -1,1 +1,155 @@
+/* 2. "body" means: style the ENTIRE page background and default text for the whole document. */
+body {
+    background-color: rosybrown;
+    /* 2a. Sets the background color of the whole browser window/page to a pinkish-brown color. */
 
+    font-family: Arial, sans-serif;
+    /* 2b. Sets the default font (text style) for the whole page to Arial.
+           If Arial isn't available on the user's device, it falls back to any generic sans-serif font. */
+}
+
+/* 3. ".business-card" targets the element with class="business-card" in the HTML
+      (the big div that wraps the whole card, see index.html step 10). */
+.business-card {
+    font-size: 16px;
+    /* 3a. Sets the default text size inside the card to 16 pixels (other elements inside can override this). */
+
+    background-color: lavenderblush;
+    /* 3b. Sets the card's own background color (light pink), different from the page background. */
+
+    text-align: center;
+    /* 3c. Centers all text horizontally inside the card. */
+
+    max-width: 400px;
+    /* 3d. The card will never get WIDER than 400 pixels, even on big screens. */
+
+    margin-top: 100px;
+    /* 3e. Pushes the card down 100 pixels from the top of the page, creating space above it. */
+
+    margin-left: auto;
+    margin-right: auto;
+    /* 3f. "auto" on both left and right margins centers the card horizontally on the page. */
+
+    border: 3px solid darkslategray;
+    /* 3g. Draws a solid, 3-pixel-thick, dark greenish-grey line/border all around the card. */
+
+    padding: 20px;
+    /* 3h. Adds 20 pixels of empty space INSIDE the border, between the border and the card's content
+           (so text/images don't touch the edge of the card). */
+
+    width: 300px;
+    /* 3i. Sets the card's actual width to 300 pixels (this works together with max-width above). */
+}
+
+/* 4. ".profile-image" targets the element with class="profile-image" in the HTML
+      (the <img> tag, see index.html step 11). */
+.profile-image {
+    max-width: 100%;
+    /* 4a. The image will never be wider than its container (the card), so it won't overflow/stick out. */
+
+    max-height: 150px;
+    /* 4b. The image will never be taller than 150 pixels, keeping it a reasonable size. */
+
+    border: 2px solid black;
+    /* 4c. Draws a solid black 2-pixel border/frame around the image. */
+}
+
+/* 5. ".full-name" targets the element with class="full-name" in the HTML
+      (the <p> tag showing "Basketronics", see index.html step 12). */
+.full-name {
+    color: rgb(47, 79, 79);
+    /* 5a. Sets the text color to a dark slate grey/green (written using Red-Green-Blue numbers instead of a color name). */
+
+    font-size: 24px;
+    /* 5b. Makes this text bigger (24 pixels) than the normal 16px, so the name stands out. */
+
+    margin-bottom: 5px;
+    margin-top: 5px;
+    /* 5c. Adds a small 5-pixel gap above and below this text, so it doesn't touch the image or the text below it. */
+
+    display: block;
+    /* 5d. Makes sure this element behaves like its own separate line/box (this is actually the default for <p>, so this line has no visible effect here). */
+}
+
+/* 6. ".designation" targets the element with class="designation" in the HTML
+      (the <p> tag showing "Software Developer", see index.html step 13). */
+.designation {
+    color: grey;
+    /* 6a. Sets the text color to grey. */
+
+    font-size: 18px;
+    /* 6b. Makes this text slightly bigger than normal (18px instead of 16px). */
+
+    margin-bottom: 5px;
+    margin-top: 5px
+    /* 6c. Adds a small 5-pixel gap above and below this text.
+           NOTE: this line is missing a semicolon (;) at the end. It still works here because it's
+           the last property before the closing bracket, but it's good practice to always add the semicolon. */
+}
+
+/* 7. ".company" targets the element with class="company" in the HTML
+      (the <p> tag showing "@basket", see index.html step 14). */
+.company {
+    color: rgb(169, 169, 169);
+    /* 7a. Sets the text color to a light grey (using Red-Green-Blue numbers). */
+
+    font-size: 16px;
+    /* 7b. Keeps the text at the normal/default size (16px). */
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+    /* 7c. Adds a small 5-pixel gap above and below this text. */
+}
+
+/* 8. "hr" (no dot, because it's a plain HTML tag, not a class) targets EVERY <hr> line-divider
+      in the HTML (see index.html steps 15 and 19). */
+hr {
+    color: grey;
+    /* 8a. Sets the line's color to grey. */
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* 8b. Adds a bigger, 20-pixel gap above and below the line, so it clearly separates sections. */
+
+    width: 300px;
+    /* 8c. Sets the line's width to exactly 300 pixels. */
+}
+
+/* 9. ".social-media" targets the element with class="social-media" in the HTML
+      (the div wrapping "Connect with me" and the social links, see index.html step 20). */
+.social-media {
+    margin-top: 10px;
+    /* 9a. Adds a 10-pixel gap above this section, separating it from the line above it. */
+
+    size: 14px;
+    /* 9b. NOTE: "size" is not a real CSS property for this kind of styling, so this line does nothing.
+           (You probably meant "font-size: 14px;" if you wanted to change the text size here.) */
+}
+
+/* 10. ".social-media a" targets ONLY the <a> (link) tags that are INSIDE an element with
+       class="social-media" (so this only affects the Twitter/LinkedIn/GitHub links,
+       see index.html steps 23, 24, 25 — not the Portfolio link, which is outside this div). */
+.social-media a {
+    color: darkred;
+    /* 10a. Sets the text color of these three links to dark red. */
+
+    margin: 0px 10px;
+    /* 10b. Shorthand for spacing: 0px space on top/bottom, 10px space on left/right of each link,
+            so the three links don't crowd each other. */
+}
+
+/* 11. "p" (plain tag, no dot) targets EVERY <p> paragraph on the whole page
+       (full-name, designation, company, mail, phone-no, social-media-links — all of them). */
+p {
+    margin: 5px;
+    /* 11a. Adds a small, equal 5-pixel gap on all four sides (top/right/bottom/left) of every paragraph.
+            NOTE: this general rule can be OVERRIDDEN by more specific rules above
+            (like .full-name, .designation, .company already set their own margin-top/margin-bottom). */
+}
+
+/* 12. "a" (plain tag, no dot) targets EVERY link on the whole page
+       (Portfolio link AND the three social media links). */
+a {
+    text-decoration: none;
+    /* 12a. Removes the default underline that browsers normally put under clickable links. */
+}
