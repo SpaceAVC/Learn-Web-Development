@@ -83,8 +83,8 @@ body {
     margin-bottom: 5px;
     margin-top: 5px
     /* 6c. Adds a small 5-pixel gap above and below this text.
-           NOTE: this line is missing a semicolon (;) at the end. It still works here because it's
-           the last property before the closing bracket, but it's good practice to always add the semicolon. */
+        NOTE: this line is missing a semicolon (;) at the end. It still works here because it's
+        the last property before the closing bracket, but it's good practice to always add the semicolon. */
 }
 
 /* 7. ".company" targets the element with class="company" in the HTML
@@ -127,7 +127,7 @@ hr {
 }
 
 /* 10. ".social-media a" targets ONLY the <a> (link) tags that are INSIDE an element with
-       class="social-media" (so this only affects the Twitter/LinkedIn/GitHub links,
+    class="social-media" (so this only affects the Twitter/LinkedIn/GitHub links,
        see index.html steps 23, 24, 25 — not the Portfolio link, which is outside this div). */
 .social-media a {
     color: darkred;
