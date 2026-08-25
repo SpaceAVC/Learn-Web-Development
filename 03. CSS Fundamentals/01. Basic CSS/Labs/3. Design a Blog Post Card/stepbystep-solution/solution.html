@@ -1,1 +1,124 @@
+<!--
+  ==========================================================================
+  STEP-BY-STEP COMMENTED HTML
+  Every line below is numbered and explained: WHAT it does, WHY it's there,
+  and HOW it connects to the CSS in styles.css.
 
+  NOTE: Your original file had an extra, duplicate </body></html> at the
+  very end (after the real closing tags). A page can only have ONE <body>
+  and ONE </html>. That duplicate has been removed here so the HTML is
+  valid.
+  ==========================================================================
+-->
+
+<!-- 1. Tells the browser this is an HTML5 document. Must always be
+        the very first line — without it, browsers may render the
+        page in "quirks mode" with inconsistent CSS behavior -->
+<!DOCTYPE html>
+
+<!-- 2. The root element that wraps the ENTIRE page.
+        lang="en" tells browsers/screen readers/translators the
+        page's content is in English (helps accessibility & SEO) -->
+<html lang="en">
+
+    <!-- 3. The <head> holds metadata: information ABOUT the page
+             that is not directly displayed as visible content -->
+    <head>
+
+        <!-- 3a. Sets the character encoding to UTF-8, which supports
+                 virtually every character/symbol/emoji. Prevents
+                 weird "garbled text" bugs -->
+        <meta charset="UTF-8" />
+
+        <!-- 3b. Controls how the page scales on different devices.
+                 width=device-width makes the page match the screen's
+                 actual width; initial-scale=1.0 sets default zoom to
+                 100%. This is essential for the page to look correct
+                 (not tiny/zoomed-out) on phones and tablets -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- 3c. Sets the text shown in the browser tab and in
+                 bookmarks/search results -->
+        <title>Blog Post Card</title>
+
+        <!-- 3d. Links this HTML file to the external CSS file so all
+                 the rules written in styles.css get applied to the
+                 elements below. rel="stylesheet" tells the browser
+                 WHAT kind of linked file this is; href points to its
+                 location relative to this HTML file -->
+        <link rel="stylesheet" href="./styles.css" />
+
+    </head>
+
+    <!-- 4. The <body> holds everything the user actually SEES on
+             the page. Styled by the "body { }" rule in the CSS -->
+    <body>
+
+        <!-- 5. This <div> is the outer container for the whole card.
+                 class="blog-post-card" connects it to the
+                 ".blog-post-card { }" rule in the CSS, which gives
+                 it the white background, rounded corners, fixed
+                 width, centering, and shadow -->
+        <div class="blog-post-card">
+
+            <!-- 6. The card's cover image.
+                     src = the image file's URL (where the browser
+                           fetches the picture from)
+                     alt = fallback/accessibility text shown if the
+                           image fails to load, and read aloud by
+                           screen readers
+                     class="post-img" connects it to ".post-img { }"
+                     in the CSS, which forces its width to 350px and
+                     rounds only its top corners -->
+            <img
+                src="https://cdn.freecodecamp.org/curriculum/labs/cover-photo.jpg"
+                alt="working-guy"
+                class="post-img"
+            />
+
+            <!-- 7. This inner <div> wraps everything BELOW the image
+                     (title, excerpt, button). class="post-content"
+                     connects it to ".post-content { }" in the CSS,
+                     which adds 20px of margin around this whole block -->
+            <div class="post-content">
+
+                <!-- 7a. The main heading of the card. <h2> is used
+                          (not <h1>) because this is a smaller,
+                          secondary heading within the page, not the
+                          page's single main title. class="post-title"
+                          connects it to ".post-title { }", which
+                          colors the text dark grey -->
+                <h2 class="post-title">Learn WebDevelopment in 2026</h2>
+
+                <!-- 7b. A short description/summary paragraph.
+                          class="post-excerpt" connects it to
+                          ".post-excerpt { }", which makes the text
+                          grey and adds 10px of margin around it -->
+                <p class="post-excerpt">
+                    Stay ahead of the curve with the latest trends in web
+                    development. Discover what's new and exciting in 2024
+                </p>
+
+                <!-- 7c. A clickable link styled to look like a button.
+                          href is the destination URL when clicked —
+                          currently a placeholder "what?" which should
+                          be replaced with a real link (e.g. the full
+                          blog post's URL) before this goes live.
+                          class="read-more" connects it to
+                          ".read-more { }" (white text, dark button
+                          background, padding, rounded corners) and to
+                          ".read-more:hover { }" (turns black when the
+                          mouse hovers over it) -->
+                <a href="what?" class="read-more">Read More</a>
+
+            </div> <!-- 8. Closes .post-content -->
+
+        </div> <!-- 9. Closes .blog-post-card -->
+
+    </body> <!-- 10. Closes the visible body content -->
+
+</html> <!-- 11. Closes the root html element — this MUST be the
+                  very last thing in the file. Anything after this
+                  point (like a stray duplicate </body></html>) is
+                  invalid and browsers will ignore/auto-correct it,
+                  so it's best practice to remove it entirely -->
