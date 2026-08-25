@@ -1,1 +1,137 @@
+/* ==========================================================================
+   STEP-BY-STEP COMMENTED CSS
+   Every rule below is numbered and explained: WHAT it does, WHY it's there,
+   and HOW it affects the HTML.
+   ========================================================================== */
 
+/* 1. BODY — styles the whole page background (applies to <body> and,
+      by inheritance, most text inside it) */
+body {
+    /* 1a. Sets a light grey background color for the entire page,
+           using rgb() so we can fine-tune the exact shade of grey */
+    background: rgb(239, 239, 239);
+
+    /* 1b. Sets the default font for all text on the page.
+           Every element inherits this unless it overrides it itself */
+    font-family: arial;
+}
+
+/* 2. .blog-post-card — styles the <div class="blog-post-card"> that
+      wraps the entire card (image + text + button) */
+.blog-post-card {
+    /* 2a. White background so the card stands out against the grey page */
+    background: white;
+
+    /* 2b. Rounds all four corners of the card by 15px, giving it the
+           soft "card" look instead of sharp square edges */
+    border-radius: 15px;
+
+    /* 2c. Fixes the card's width to 350px so it doesn't stretch to
+           fill the whole screen on large monitors */
+    width: 350px;
+
+    /* 2d. Centers all inline/inline-block text and elements inside
+           the card horizontally (affects the title, paragraph, button) */
+    text-align: center;
+
+    /* 2e. + 2f. Centers the card itself horizontally on the page.
+           This works because the card has a fixed width (350px) —
+           "auto" margins on left/right split the remaining space evenly */
+    margin-left: auto;
+    margin-right: auto;
+
+    /* 2g. Pushes the card 50px down from whatever is above it
+           (in this case, the top of the page), creating breathing room */
+    margin-top: 50px;
+
+    /* 2h. Adds a soft drop shadow behind the card:
+           5px right, 5px down, 23px blur, black at 30% opacity.
+           This lifts the card visually off the grey background */
+    box-shadow: 5px 5px 23px rgba(0, 0, 0, 0.3);
+}
+
+/* 3. .post-content — styles the <div class="post-content"> that wraps
+      the title, excerpt, and "Read More" link (everything BELOW the image) */
+.post-content {
+    /* 3a. Adds 20px of space on all four sides (top, right, bottom, left)
+           so the text doesn't touch the edges of the white card */
+    margin: 20px;
+}
+
+/* 4. .post-img — styles the <img class="post-img"> at the top of the card */
+.post-img {
+    /* 4a. Adds 5px of space below the image, separating it slightly
+           from the text content that follows */
+    padding-bottom: 5px;
+
+    /* 4b. Forces the image to be exactly 350px wide, matching the
+           card's width so it fits perfectly without overflowing */
+    width: 350px;
+
+    /* 4c. Rounds ONLY the top-left and top-right corners (15px each),
+           leaving the bottom corners square (0).
+           This matches the card's own rounded top, so the image looks
+           "built into" the card instead of having mismatched corners.
+           Order of values = top-left, top-right, bottom-right, bottom-left */
+    border-radius: 15px 15px 0 0;
+}
+
+/* 5. .post-title — styles the <h2 class="post-title"> heading */
+.post-title {
+    /* 5a. Sets the heading text to a dark charcoal grey instead of
+           pure black, giving a slightly softer, modern look */
+    color: rgb(36, 35, 35);
+}
+
+/* 6. .post-excerpt — styles the <p class="post-excerpt"> description text */
+.post-excerpt {
+    /* 6a. Makes the paragraph text grey (lighter than the title) to
+           visually de-emphasize it — it's secondary information */
+    color: grey;
+
+    /* 6b. Adds 10px of space around the paragraph on all sides,
+           keeping it from touching the title above or button below */
+    margin: 10px;
+}
+
+/* 7. .read-more — styles the "Read More" <a> link, turning a plain
+      hyperlink into a button-like element */
+.read-more {
+    /* 7a. Makes the link text white so it's readable against the
+           dark button background set below */
+    color: rgb(255, 255, 255);
+
+    /* 7b. Adds 10px of space around the outside of the button,
+           separating it from the paragraph above it */
+    margin: 10px;
+
+    /* 7c. Adds 10px of space INSIDE the button, between the text
+           and the button's edges, making it look padded/clickable */
+    padding: 10px;
+
+    /* 7d. Rounds the button's corners slightly (5px) for a soft,
+           pill-like button shape */
+    border-radius: 5px;
+
+    /* 7e. Changes the link from its default "inline" display to
+           "inline-block". This is REQUIRED for padding/margin and
+           border-radius to work properly and visibly on a link,
+           while still letting it sit centered on its own line
+           (because the parent has text-align: center) */
+    display: inline-block;
+
+    /* 7f. Sets a dark grey background so the button looks like a
+           solid, clickable button rather than plain text */
+    background: rgb(54, 54, 54);
+
+    /* 7g. Removes the default underline that browsers put under links */
+    text-decoration: none;
+}
+
+/* 8. .read-more:hover — a PSEUDO-CLASS that only applies when the
+      user's mouse is hovering over the "Read More" button */
+.read-more:hover {
+    /* 8a. Darkens the background to pure black on hover, giving the
+           user visual feedback that the button is interactive/clickable */
+    background-color: black;
+}
