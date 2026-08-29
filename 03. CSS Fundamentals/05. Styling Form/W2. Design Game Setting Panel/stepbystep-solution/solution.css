@@ -1,1 +1,5 @@
+/* 1. This is basically for reseting all the elements so that we can know this css document is applicable! */
+* {
+  color: black;
+}
 
