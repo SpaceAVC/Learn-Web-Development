@@ -1,4 +1,4 @@
-/* 1. This is basically for reseting all the elements so that we can know this css document is applicable! */
+/* 1. Asterisk * symbol in css knwon as Universal Tag of CSS it help to select each elements in HTML that is in CSS */
 * {
-  color: black;
+  color: blue;
 }
