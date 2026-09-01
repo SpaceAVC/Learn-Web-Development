@@ -1,4 +1,4 @@
-/* This is a Universal Tag in Css this is help us to see this is connected to teh main docuement of this css*/
+/* 1. Asterisk * symbol in css knwon as Universal Tag of CSS it help to select each elements in HTML that is in CSS */
 * {
-  color: pink;
+  color: blue;
 }
