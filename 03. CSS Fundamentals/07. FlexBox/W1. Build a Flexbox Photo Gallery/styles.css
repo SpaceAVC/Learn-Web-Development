@@ -1,1 +1,4 @@
-
+/* 1. Asterisk * symbol in css knwon as Universal Tag of CSS it help to select each elements in HTML that is in CSS */
+* {
+  color: blue;
+}
